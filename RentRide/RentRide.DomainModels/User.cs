@@ -10,6 +10,6 @@ namespace RentRide.DomainModels
         public DateTime CreationTime { get; set; }
         public ICollection<Role> Roles { get; set; }
         public ICollection<Contract> Contracts { get; set; }
-        public ICollection<Car> RentedCars { get; set; }
+        
     }
 }

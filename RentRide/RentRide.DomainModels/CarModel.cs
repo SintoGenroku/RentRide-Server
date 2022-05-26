@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace RentRide.DomainModels
 {
@@ -11,7 +12,7 @@ namespace RentRide.DomainModels
         public string Color { get; set; }
         public decimal Price { get; set; }
         public float RentCoefficient { get; set; }
-        public Car Car { get; set; }
-        public Guid CarId { get; set; }
+        public ICollection<Car> Cars { get; set; }
+
     }
 }

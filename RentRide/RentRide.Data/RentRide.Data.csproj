@@ -18,11 +18,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\RentRide.Data.Contracts\RentRide.Data.Contracts.csproj" />
+    <ProjectReference Include="..\RentRide.Data.Core\RentRide.Data.Core.csproj" />
     <ProjectReference Include="..\RentRide.DomainModels\RentRide.DomainModels.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Repositories\Abstracts\" />
   </ItemGroup>
 
 </Project>

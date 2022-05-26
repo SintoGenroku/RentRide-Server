@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RentRide.Data;
 
 namespace RentRide.Data.Migrations
 {
     [DbContext(typeof(RentRideDbContext))]
-    partial class RentRideDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220526135018_rebuild-db")]
+    partial class rebuilddb
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

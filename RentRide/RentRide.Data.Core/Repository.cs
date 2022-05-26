@@ -39,7 +39,7 @@ namespace RentRide.Data.Core
             return result;
         }
 
-        public async Task<T> GetByIdAsync(params object[] KeyValues)
+        public async Task<T> FindByIdAsync(params object[] KeyValues)
         {
             var result = await Data.FindAsync(KeyValues);
             return result;

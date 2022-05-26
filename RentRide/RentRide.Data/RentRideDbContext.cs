@@ -13,10 +13,12 @@ namespace RentRide.Data
         public DbSet<Salon> Salons { get; set; }
         public DbSet<User> Users { get; set; }
 
-        public RentRideDbContext(DbContextOptions<RentRideDbContext> options)
+       public RentRideDbContext(DbContextOptions<RentRideDbContext> options)
             : base(options)
         {
         }
+
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -24,9 +26,6 @@ namespace RentRide.Data
             {
                 u.HasMany(e => e.Roles)
                 .WithMany(e => e.Users);
-
-                u.HasMany(e => e.RentedCars)
-                .WithOne(e => e.Renter);
 
                 u.HasMany(e => e.Contracts)
                 .WithOne(e => e.Client);
@@ -43,13 +42,10 @@ namespace RentRide.Data
                 .WithOne(e => e.Salon);
             });
 
-            modelBuilder.Entity<Car>(c =>
+            modelBuilder.Entity<CarModel>(c =>
             {
-                c.HasMany(e => e.CarModels)
-                .WithOne(e => e.Car).HasForeignKey(c => c.CarId);
-
-                c.HasOne(e => e.Renter)
-                .WithMany(e => e.RentedCars);
+                c.HasMany(e => e.Cars)
+                .WithOne(e => e.CarModel).HasForeignKey(c => c.CarModelId);
             });
 
             modelBuilder.Entity<Contract>(c =>
