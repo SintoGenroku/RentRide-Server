@@ -35,7 +35,6 @@ namespace RentRide.Data
             AddSpecificRepository<Contract, ContractRepository>();
             AddSpecificRepository<Role, RoleRepository>();
             AddSpecificRepository<Salon, SalonRepository>();
-            AddSpecificRepository<User, UserRepository>();
         }
     }
 }
