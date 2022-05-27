@@ -27,6 +27,8 @@ namespace RentRide.WebApplication
         {
             services.AddDbContext<RentRideDbContext>(options =>
                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            
+            services.AddScoped<IRentRideUntiOfWork, RentRideUnitOfWork>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

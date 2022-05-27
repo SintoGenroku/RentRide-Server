@@ -2,7 +2,6 @@
 using RentRide.Data.Contracts;
 using System;
 using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace RentRide.Data.Core
 {
@@ -12,7 +11,12 @@ namespace RentRide.Data.Core
         private readonly Dictionary<Type, Type> _specificRepositories;
         private readonly DbContext _dbContext;
 
-
+        protected UnitOfWork(DbContext dbContext)
+        {
+            _dbContext = dbContext;
+            _instances = new Dictionary<Type, object>();
+            _specificRepositories = new Dictionary<Type, Type>();
+        }
 
         public IRepository<T> GetRepository<T>() where T : class
         {
