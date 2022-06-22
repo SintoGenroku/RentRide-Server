@@ -3,15 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32328.378
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentRide.WebApplication", "RentRide.WebApplication\RentRide.WebApplication.csproj", "{5B5985A6-B8A5-4F2B-AC1C-72B2D4E373B5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RentRide.WebApplication", "RentRide.WebApplication\RentRide.WebApplication.csproj", "{5B5985A6-B8A5-4F2B-AC1C-72B2D4E373B5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentRide.Data", "RentRide.Data\RentRide.Data.csproj", "{12335579-4B7A-40A7-A74E-9842FAF27B9C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RentRide.Data", "RentRide.Data\RentRide.Data.csproj", "{12335579-4B7A-40A7-A74E-9842FAF27B9C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentRide.Data.Contracts", "RentRide.Data.Contracts\RentRide.Data.Contracts.csproj", "{E893ADFD-25DF-4D52-ACDC-A34DE71D4341}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RentRide.Data.Contracts", "RentRide.Data.Contracts\RentRide.Data.Contracts.csproj", "{E893ADFD-25DF-4D52-ACDC-A34DE71D4341}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentRide.Data.Core", "RentRide.Data.Core\RentRide.Data.Core.csproj", "{5E609C73-4102-45F8-BFFA-1A6473CB8F6B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RentRide.Data.Core", "RentRide.Data.Core\RentRide.Data.Core.csproj", "{5E609C73-4102-45F8-BFFA-1A6473CB8F6B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentRide.DomainModels", "RentRide.DomainModels\RentRide.DomainModels.csproj", "{44AD12D3-A71D-41CC-9E64-E329275A3B81}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RentRide.DomainModels", "RentRide.DomainModels\RentRide.DomainModels.csproj", "{44AD12D3-A71D-41CC-9E64-E329275A3B81}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RentRide.Foundation", "RentRide.Foundation\RentRide.Foundation.csproj", "{FC66911E-6DF1-4981-9855-48B7C760F811}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentRide.Core", "RentRide.Core\RentRide.Core.csproj", "{883E4BA9-AFF2-42F5-AF90-87562048AE4C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +43,14 @@ Global
 		{44AD12D3-A71D-41CC-9E64-E329275A3B81}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{44AD12D3-A71D-41CC-9E64-E329275A3B81}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{44AD12D3-A71D-41CC-9E64-E329275A3B81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC66911E-6DF1-4981-9855-48B7C760F811}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC66911E-6DF1-4981-9855-48B7C760F811}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC66911E-6DF1-4981-9855-48B7C760F811}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC66911E-6DF1-4981-9855-48B7C760F811}.Release|Any CPU.Build.0 = Release|Any CPU
+		{883E4BA9-AFF2-42F5-AF90-87562048AE4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{883E4BA9-AFF2-42F5-AF90-87562048AE4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{883E4BA9-AFF2-42F5-AF90-87562048AE4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{883E4BA9-AFF2-42F5-AF90-87562048AE4C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

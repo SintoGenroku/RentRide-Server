@@ -12,7 +12,7 @@ namespace RentRide.Data.Repositories.Abstracts
 
         IEnumerable<Car> GetBySalonId(Guid id);
 
-        IEnumerable<Car> GetByBrand(string Brand);
+        IEnumerable<Car> GetByBrand(string brand);
 
     }
 }

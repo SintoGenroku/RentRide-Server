@@ -3,6 +3,7 @@ using RentRide.Data.Core;
 using RentRide.Data.Repositories.Abstracts;
 using RentRide.DomainModels;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -23,18 +24,18 @@ namespace RentRide.Data.Repositories
             return salon;
         }
 
-        public async Task<Salon> GetByLocationAsync(string location)
+        public  IEnumerable<Salon> GetByLocation(string location)
         {
-            var salon = await GetSalonsQuery()
-                .FirstOrDefaultAsync(salon => salon.Location == location);
+            var salon = GetSalonsQuery()
+                .Where(salon => salon.Location == location);
 
             return salon;
         }
 
-        public async Task<Salon> GetByNameAsync(string name)
+        public IEnumerable<Salon> GetByName(string name)
         {
-            var salon = await GetSalonsQuery()
-                .FirstOrDefaultAsync(salon => salon.Name == name);
+            var salon =  GetSalonsQuery()
+                .Where(salon => salon.Name == name);
 
             return salon;
         }

@@ -3,7 +3,7 @@ using RentRide.Data.Repositories.Abstracts;
 
 namespace RentRide.Data
 {
-    public interface IRentRideUntiOfWork : IUnitOfWork
+    public interface IRentRideUnitOfWork : IUnitOfWork
     {
         ICarRepository Cars { get; }
 
@@ -14,6 +14,8 @@ namespace RentRide.Data
         ISalonRepository Salons { get; }
         
         IUserRepository Users { get; }
+        
+        ICarModelRepository CarModels { get; }
 
     }
 }

@@ -1,6 +1,7 @@
 ﻿using RentRide.Data.Contracts;
 using RentRide.DomainModels;
 using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace RentRide.Data.Repositories.Abstracts
@@ -9,9 +10,9 @@ namespace RentRide.Data.Repositories.Abstracts
     {
         Task<Salon> GetByIdAsync(Guid id);
 
-        Task<Salon> GetByNameAsync(string name);
+        IEnumerable<Salon> GetByName(string name);
 
-        Task<Salon> GetByLocationAsync(string location);
+        IEnumerable<Salon> GetByLocation(string location);
   
     }
 }

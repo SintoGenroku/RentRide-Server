@@ -1,6 +1,4 @@
-﻿using System.Threading.Tasks;
-
-namespace RentRide.Data.Contracts
+﻿namespace RentRide.Data.Contracts
 {
     public interface IUnitOfWork
     {

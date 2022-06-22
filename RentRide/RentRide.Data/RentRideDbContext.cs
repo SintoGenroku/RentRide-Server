@@ -7,17 +7,10 @@ namespace RentRide.Data
     {
 
         public DbSet<Car> Cars { get; set; }
-        public DbSet<CarModel> CarModels { get; set; }
-        public DbSet<Contract> Contracts { get; set; }
         public DbSet<Role> Roles { get; set; }
-        public DbSet<Salon> Salons { get; set; }
-        public DbSet<User> Users { get; set; }
 
-       public RentRideDbContext(DbContextOptions<RentRideDbContext> options)
-            : base(options)
-        {
-        }
-
+        public RentRideDbContext(DbContextOptions<RentRideDbContext> options)
+            : base(options){}
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

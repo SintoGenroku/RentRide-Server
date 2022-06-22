@@ -1,17 +1,11 @@
-﻿using RentRide.Data.Contracts;
-using RentRide.Data.Core;
+﻿using RentRide.Data.Core;
 using RentRide.Data.Repositories;
 using RentRide.Data.Repositories.Abstracts;
 using RentRide.DomainModels;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace RentRide.Data
 {
-    public class RentRideUnitOfWork : UnitOfWork, IRentRideUntiOfWork
+    public class RentRideUnitOfWork : UnitOfWork, IRentRideUnitOfWork
     {
         public ICarRepository Cars => 
             (ICarRepository)GetRepository<Car>();
@@ -28,13 +22,18 @@ namespace RentRide.Data
         public IUserRepository Users => 
             (IUserRepository)GetRepository<User>();
 
+        public ICarModelRepository CarModels =>
+            (ICarModelRepository)GetRepository<CarModel>();
+
 
         public RentRideUnitOfWork(RentRideDbContext context) : base(context)
         {
             AddSpecificRepository<Car, CarRepository>();
             AddSpecificRepository<Contract, ContractRepository>();
             AddSpecificRepository<Role, RoleRepository>();
+            AddSpecificRepository<User, UserRepository>();
             AddSpecificRepository<Salon, SalonRepository>();
+            AddSpecificRepository<CarModel, CarModelRepository >();
         }
     }
 }

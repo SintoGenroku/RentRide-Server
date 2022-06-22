@@ -75,7 +75,7 @@ namespace RentRide.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("CarModels");
+                    b.ToTable("CarModel");
                 });
 
             modelBuilder.Entity("RentRide.DomainModels.Contract", b =>
@@ -111,7 +111,7 @@ namespace RentRide.Data.Migrations
 
                     b.HasIndex("SalonId");
 
-                    b.ToTable("Contracts");
+                    b.ToTable("Contract");
                 });
 
             modelBuilder.Entity("RentRide.DomainModels.Role", b =>
@@ -142,7 +142,7 @@ namespace RentRide.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Salons");
+                    b.ToTable("Salon");
                 });
 
             modelBuilder.Entity("RentRide.DomainModels.User", b =>
@@ -156,6 +156,9 @@ namespace RentRide.Data.Migrations
                         .HasColumnType("datetime2")
                         .HasDefaultValueSql("getdate()");
 
+                    b.Property<string>("Fullname")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("PasswordHash")
                         .HasColumnType("nvarchar(max)");
 
@@ -164,7 +167,7 @@ namespace RentRide.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Users");
+                    b.ToTable("User");
                 });
 
             modelBuilder.Entity("RoleUser", b =>
